@@ -21,7 +21,6 @@ class CryptoPair():
         self.ohlc.plot(x = 'time', y = 'moving_average')
         plt.show()
 
-
 def initialize():
     k = krakenex.API()
     response = k.query_public('AssetPairs')     
