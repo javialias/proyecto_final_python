@@ -1,5 +1,4 @@
 import streamlit as st
-import crypto_pair as cp
 
 """
 # Proyecto final Python
