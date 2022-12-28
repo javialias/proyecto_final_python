@@ -1,5 +1,6 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
+import matplotlib.pyplot as plt
 import crypto_pair as cp
 
 with st.sidebar:
@@ -18,24 +19,29 @@ if selected == "Aplicación":
     Este es el informe sobre el proyecto de la asignatura _Python para el análisis de Datos_ del
     Máster en Big Data Science de la Universidad de Navarra. 
     """
-    par = cp.initialize()
-    if par:
+    possible_pairs = cp.get_possible_pairs()
+
+    pair_label = st.selectbox('Seleccione el par que desee estudiar:', possible_pairs)
+    
+    if pair_label:
+        par = cp.CryptoPair(pair_label)
         st.write(f'Par seleccionado: {par.pair}')
 
-    """
-    Escoja los indicadores técnicos que desea graficar:
-    """
-    check_mediamovil = st.checkbox('Media Móvil')
-    check_rsi = st.checkbox('RSI')
-    check_media_cotiz = st.checkbox('Media Móvil junto con la cotización del par')
+        """
+        Escoja los indicadores técnicos que desea graficar:
+        """
+        check_mediamovil = st.checkbox('Media Móvil')
+        check_rsi = st.checkbox('RSI')
+        check_media_cotiz = st.checkbox('Media Móvil junto con la cotización del par')
 
-    if st.button('Plot'):
-        if check_mediamovil:
-            st.write('media movil')
-        if check_rsi:
-            st.write('rsi')
-        if check_media_cotiz:
-            st.write('media cotizacion')
+        if st.button('Plot'):
+            if check_mediamovil:
+                st.plotly_chart(par.show_moving_average(), use_container_width=True)
+                
+            if check_rsi:
+                st.plotly_chart(par.show_rsi(), use_container_width=True)
+            if check_media_cotiz:
+                st.plotly_chart(par.show_rsi(True), use_container_width=True)
 
 if selected == "Informe":
     st.write("esto es un informe to guapo")
