@@ -36,8 +36,11 @@ Escoja los indicadores técnicos que desea graficar:
 check_mediamovil = st.checkbox('Media Móvil')
 check_rsi = st.checkbox('RSI')
 check_media_cotiz = st.checkbox('Media Móvil junto con la cotización del par')
+check_media_cotisdfz = st.checkbox('Media Móvil junfsdfsdfn la cotización del par')
 
 if st.button('Plot'):
     #funciones que llaman a las gráficas
     suma = 1+1
+    
+    
     
