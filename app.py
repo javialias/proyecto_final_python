@@ -37,9 +37,14 @@ check_mediamovil = st.checkbox('Media Móvil')
 check_rsi = st.checkbox('RSI')
 check_media_cotiz = st.checkbox('Media Móvil junto con la cotización del par')
 
+
 if st.button('Plot'):
-    #funciones que llaman a las gráficas
-    suma = 2+2
+    if check_mediamovil:
+        st.write('media movil')
+    if check_rsi:
+        st.write('rsi')
+    if check_media_cotiz:
+        st.write('media cotizacion')
     
     
     
