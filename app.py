@@ -40,7 +40,7 @@ check_media_cotisdfz = st.checkbox('Media Móvil junfsdfsdfn la cotización del 
 
 if st.button('Plot'):
     #funciones que llaman a las gráficas
-    suma = 1+1
+    suma = 2+2
     
     
     
