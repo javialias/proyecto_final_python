@@ -64,22 +64,14 @@ if selected == "Aplicación":
 
 if selected == "Memoria":
 
-    '''
-    # Memoria del proyecto
-    '''
-
     """
-    Este proyecto ha sido creado por Francisco Javier Alías Carrascosa y Samuel Medina Gutiérrez para la asignatura _Python para el Análisis de Datos_ del **Máster en Big Data Science** de la Universidad de Navarra.
+    # Memoria del proyecto
     
-    &nbsp;&nbsp;&nbsp;
-    &nbsp;&nbsp;&nbsp;
-    &nbsp;&nbsp;&nbsp;
-    &nbsp;&nbsp;&nbsp;
-    &nbsp;&nbsp;&nbsp;
-    &nbsp;&nbsp;&nbsp;
+    Este proyecto ha sido creado por Francisco Javier Alías Carrascosa y Samuel Medina Gutiérrez para la asignatura _Python para el Análisis de Datos_ del **Máster en Big Data Science** de la Universidad de Navarra.
     ________________________
 
-    ## _**Índice**_
+    ## **ÍNDICE**
+
     #### 1. Introducción y planteamiento del proyecto
     #### 2. Descripción y estructura del código
     ##### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.1. Módulo _crypto_pair.py_ 
