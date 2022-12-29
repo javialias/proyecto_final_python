@@ -47,8 +47,10 @@ if selected == "Aplicación":
                 step=1,
                 value=3,
             ))
+    
+    if (check_mediamovil or check_media_cotiz or check_rsi ):
+       if st.button('Plot'):
 
-    if st.button('Plot'):
         if check_mediamovil:
             try:
                 st.plotly_chart(par.show_moving_average(window=ventana), use_container_width=True)
