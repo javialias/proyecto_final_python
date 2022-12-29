@@ -13,11 +13,12 @@ with st.sidebar:
 
 if selected == "Aplicación":
     """
-    # Proyecto final Python
+    # Aplicación 
     ##### Samuel Medina Gutiérrez y Francisco Javier Alías Carrascosa
 
-    Este es el informe sobre el proyecto de la asignatura _Python para el análisis de Datos_ del
-    Máster en Big Data Science de la Universidad de Navarra. 
+    Esta aplicación permite seleccionar un par de criptomonedas de Kraken y visualizar algunos indicadores técnicos.
+    
+    
     """
     possible_pairs = cp.get_possible_pairs()
     possible_indicators = ['Média movil', 'RSI', 'Cotización y media móvil']
@@ -32,7 +33,7 @@ if selected == "Aplicación":
 
     with indicator_col:
 
-        indicators = st.multiselect('Selecciona el indicador que quiere ver', options = possible_indicators)
+        indicators = st.multiselect('Seleccione los indicadores que desee:', options = possible_indicators)
         check_mediamovil = 'Média movil' in indicators
         check_rsi = 'RSI' in indicators
         check_media_cotiz = 'Cotización y media móvil' in indicators
@@ -40,7 +41,7 @@ if selected == "Aplicación":
     with window_col:
         if (check_mediamovil or check_media_cotiz):
             ventana = int(st.slider(
-                "Ventana media móvil",
+                "Seleccione la ventana media móvil:",
                 min_value=3,
                 max_value=14,
                 step=1,
