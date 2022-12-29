@@ -16,7 +16,7 @@ if selected == "Aplicación":
     # Aplicación 
     ##### Samuel Medina Gutiérrez y Francisco Javier Alías Carrascosa
 
-    Esta aplicación permite seleccionar un par de criptomonedas de Kraken y visualizar algunos indicadores técnicos.
+    Esta aplicación permite seleccionar un par de monedas de Kraken y visualizar algunos indicadores técnicos.
     
     
     """
