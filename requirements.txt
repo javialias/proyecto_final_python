@@ -4,5 +4,5 @@ matplotlib==3.6.2
 krakenex==2.1.0
 pandas==1.5.2
 streamlit-option-menu==0.3.2
-plotly==5.11.10
+plotly.express==5.11.10
 pykrakenapi==0.3.1
